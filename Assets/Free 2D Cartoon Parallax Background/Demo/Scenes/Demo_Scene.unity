@@ -1472,7 +1472,7 @@ Transform:
   m_GameObject: {fileID: 1724647396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.88, z: 10}
+  m_LocalPosition: {x: -10, y: -4.88, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1564,6 +1564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 11
+  jumpUpSprite: {fileID: 21300000, guid: d00a97fec0ddfde49bb6a9ae8d67a45b, type: 3}
+  jumpDownSprite: {fileID: 21300000, guid: 371145ea5533f274aa6550d168f1bf4c, type: 3}
+  jumpLandSprite: {fileID: 21300000, guid: ee1a12069c8273149801819a62088d65, type: 3}
 --- !u!50 &1724647401
 Rigidbody2D:
   serializedVersion: 4

@@ -46,18 +46,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private async void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
             spriteRenderer.sprite = jumpLandSprite; // Set landing sprite
-            await Task.Run(() =>
-            {
-                Thread.Sleep(200);
-            });
-            animator.enabled = true;
-
+            StartCoroutine(ReEnableAnimatorAfterDelay(0.2f)); // Wait for 0.2 seconds before enabling Animator
         }
     }
+
+    private IEnumerator ReEnableAnimatorAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified time in seconds
+        animator.enabled = true; // Re-enable the Animator component
+    }
+
 }

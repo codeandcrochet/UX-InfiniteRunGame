@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.GameScripts;
 using UnityEngine;
 
 public class ParallaxBackground_0 : MonoBehaviour
 {
     public bool Camera_Move;
-    public float Camera_MoveSpeed = 1.5f;
+    public float Camera_MoveSpeed = GameVars.Camera_MoveSpeed;
     [Header("Layer Setting")]
     public float[] Layer_Speed = new float[7];
     public GameObject[] Layer_Objects = new GameObject[7];
