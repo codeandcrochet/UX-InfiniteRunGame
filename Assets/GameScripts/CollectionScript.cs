@@ -25,6 +25,11 @@ public class Collectible : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            CollectionCounter counter = FindObjectOfType<CollectionCounter>();
+            if (counter != null)
+            {
+                counter.IncrementCounter();
+            }
             Destroy(gameObject); // Destroy collectible if collected by the player
         }
     }
