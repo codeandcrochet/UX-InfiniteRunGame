@@ -1597,7 +1597,7 @@ MonoBehaviour:
   enemyPrefab3: {fileID: 8452888552218779642, guid: 02ad9111cf45aab4cb3a12383b71ea96, type: 3}
   spawnYMin: -3
   spawnYMax: 3
-  spawnInterval: 5
+  spawnInterval: 10
   enemySpeed: 4
 --- !u!1 &1615807478
 GameObject:
@@ -2328,11 +2328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7703952877784737389, guid: a6c972e1530dff147aff773aaa536d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.83
+      value: 5.41
       objectReference: {fileID: 0}
     - target: {fileID: 7703952877784737389, guid: a6c972e1530dff147aff773aaa536d55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.39
+      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 7703952877784737389, guid: a6c972e1530dff147aff773aaa536d55, type: 3}
       propertyPath: m_LocalPosition.z
