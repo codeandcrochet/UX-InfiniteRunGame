@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5375992479950662817}
   - component: {fileID: 8654621027508074832}
-  - component: {fileID: 5134502697420384108}
   - component: {fileID: 4335155877001021397}
   - component: {fileID: 5200393866156990893}
-  - component: {fileID: 1987778631871667759}
+  - component: {fileID: 3309369051536814489}
+  - component: {fileID: 4994293478898352279}
   m_Layer: 0
   m_Name: NoPhysSnowball
   m_TagString: Untagged
@@ -88,20 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5134502697420384108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8376083627320388169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 740f87c022f4c3040b7b660a60ed610c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
-  destroyTime: 3
 --- !u!50 &4335155877001021397
 Rigidbody2D:
   serializedVersion: 4
@@ -164,7 +150,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.27
---- !u!114 &1987778631871667759
+--- !u!114 &3309369051536814489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,6 +159,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8376083627320388169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c782f48b45763fc42b2a360a4e2af87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9557af14cd50b8445a800ae758816161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  destroyTime: 3
+--- !u!114 &4994293478898352279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376083627320388169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9557af14cd50b8445a800ae758816161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  destroyTime: 3
