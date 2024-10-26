@@ -1,0 +1,32 @@
+using System;
+using Assets.GameScripts.Models;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace Assets.GameScripts.Views
+{
+    public class HandleInputs : MonoBehaviour
+    {
+        public void SetDifficultyHard()
+        {
+            Debug.Log("easy click");
+            GameVars.Difficulty = Difficulty.Hard;
+            SceneManager.LoadScene(1);
+        }
+
+        public void SetDifficultyEasy()
+        {
+            Debug.Log("hard click");
+            SceneManager.LoadScene(1);
+        }
+
+        public class SceneChanger : MonoBehaviour
+        {
+            // Method to change the scene
+            public void LoadScene(string sceneName)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+        }
+    }
+}
