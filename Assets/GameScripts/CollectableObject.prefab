@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4158708095695580021}
   m_Layer: 0
   m_Name: CollectableObject
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698aa74f35f049848a254103f47e64b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSound: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
+  collectSound: {fileID: 8300000, guid: b83bf8726a7fac349a54389f0c57cda6, type: 3}
 --- !u!82 &4158708095695580021
 AudioSource:
   m_ObjectHideFlags: 0

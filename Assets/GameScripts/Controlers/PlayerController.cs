@@ -14,14 +14,19 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private HealthManager healthManager;
-    private bool hasTakenDamage = false; // Flag to track if damage has been taken
-
+    private bool hasTakenDamage;
+    public AudioClip collectSound;
+    public AudioClip jumpSound;
+    public AudioClip healthLossSound;
+    private AudioSource audioSource;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         healthManager = FindObjectOfType<HealthManager>();
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -32,6 +37,7 @@ public class PlayerController : MonoBehaviour
             animator.enabled = false;
             spriteRenderer.sprite = jumpUpSprite;
             isGrounded = false;
+            audioSource.PlayOneShot(jumpSound);
         }
 
         if (!isGrounded)
@@ -49,10 +55,17 @@ public class PlayerController : MonoBehaviour
         {
             if (healthManager != null)
             {
+                audioSource.PlayOneShot(healthLossSound);
                 healthManager.TakeDamage(1);
                 hasTakenDamage = true; // Prevent additional deductions from the same collision
                 Debug.Log("Health deducted from collision with ice block.");
             }
+        }
+
+        if ((collision.CompareTag("Collectible")))
+        {
+            Debug.Log("play sound for collection?");
+            audioSource.PlayOneShot(collectSound);
         }
     }
 
