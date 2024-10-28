@@ -467,11 +467,11 @@ GameObject:
   - component: {fileID: 3398154382204998674}
   - component: {fileID: 3967404105032638837}
   - component: {fileID: 2098558613668279686}
-  - component: {fileID: 801886001244612873}
-  - component: {fileID: 3416722741889308629}
+  - component: {fileID: 48104036404313849}
+  - component: {fileID: 6552214671216630130}
   m_Layer: 0
   m_Name: Snowman1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,13 +501,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6349745737842695772}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.25
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -565,7 +565,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.561371, y: 6.8888783}
   m_EdgeRadius: 0
---- !u!114 &801886001244612873
+--- !u!114 &48104036404313849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -574,25 +574,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6349745737842695772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4988f4c307ee5f4c95b0eb38aa75a19, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dddd351dcb009d4a9f604b6e4a8c0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6552214671216630130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349745737842695772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2e1483b0ff3294f86f894884f964ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 5676687930201240234}
   bulletPrefab: {fileID: 8376083627320388169, guid: 1b1eb1be5aaf49743ac992789569306d, type: 3}
-  interval: 5
---- !u!114 &3416722741889308629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6349745737842695772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64aefc81c1a60204884d70f14f2b9fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyTime: 15
+  interval: 1
 --- !u!1 &7888999708434999829
 GameObject:
   m_ObjectHideFlags: 0

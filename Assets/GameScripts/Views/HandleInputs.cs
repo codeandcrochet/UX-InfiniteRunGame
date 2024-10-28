@@ -8,7 +8,7 @@ namespace Assets.GameScripts.Views
     {
         public void SetDifficultyHard()
         {
-            Debug.Log("easy click");
+            Debug.Log("Hard click");
             GameVars.Difficulty = Difficulty.Hard;
             GameVars.ResetSpeed();
             SceneManager.LoadScene(1);
@@ -16,7 +16,7 @@ namespace Assets.GameScripts.Views
 
         public void SetDifficultyEasy()
         {
-            Debug.Log("hard click");
+            Debug.Log("Easy click");
             GameVars.Difficulty = Difficulty.Easy;
             GameVars.ResetSpeed();
             SceneManager.LoadScene(1);
@@ -24,7 +24,7 @@ namespace Assets.GameScripts.Views
 
         public void ReturnToLoadingScreen()
         {
-            Debug.Log("hard click");
+            Debug.Log("LoadScreen click");
             GameVars.ResetSpeed();
             SceneManager.LoadScene(0);
         }

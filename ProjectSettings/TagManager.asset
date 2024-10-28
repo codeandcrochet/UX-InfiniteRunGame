@@ -8,6 +8,7 @@ TagManager:
   - IceBlock
   - HealthLoss
   - Collectible
+  - Enemy
   layers:
   - Default
   - TransparentFX

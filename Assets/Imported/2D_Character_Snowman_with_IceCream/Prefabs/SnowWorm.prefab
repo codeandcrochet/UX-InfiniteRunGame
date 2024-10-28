@@ -347,7 +347,6 @@ GameObject:
   - component: {fileID: 7858150907210825906}
   - component: {fileID: 2649150311889541302}
   - component: {fileID: 4850556125860174160}
-  - component: {fileID: 4688436462935912417}
   m_Layer: 6
   m_Name: SnowWorm
   m_TagString: Untagged
@@ -448,20 +447,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.561371, y: 6.8888783}
   m_EdgeRadius: 0
---- !u!114 &4688436462935912417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109968145295062479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5762550121f1745a6e2e560ab8e1c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ground: {fileID: 0}
-  speed: 5
 --- !u!1 &7483453257948133119
 GameObject:
   m_ObjectHideFlags: 0
