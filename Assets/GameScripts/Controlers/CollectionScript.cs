@@ -4,10 +4,12 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     private float leftBound;
+    public AudioClip collectSound;      // The sound effect for ice cream collection
+    private AudioSource audioSource;
 
     private void Start()
     {
-        // Calculate the left boundary based on the camera's position
+        audioSource = GetComponent<AudioSource>();
         leftBound = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x - 1f; // Adjusted slightly off-screen
         Debug.Log("Left Bound set to: " + leftBound); // Debug statement to confirm the boundary value  
     }
@@ -31,6 +33,7 @@ public class Collectible : MonoBehaviour
             {
                 counter.IncrementCounter();
             }
+            audioSource.PlayOneShot(collectSound);
             Destroy(gameObject); 
         }
     }

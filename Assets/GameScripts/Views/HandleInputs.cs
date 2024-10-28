@@ -1,4 +1,3 @@
-using System;
 using Assets.GameScripts.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,6 +16,7 @@ namespace Assets.GameScripts.Views
         public void SetDifficultyEasy()
         {
             Debug.Log("hard click");
+            GameVars.Difficulty = Difficulty.Easy;
             SceneManager.LoadScene(1);
         }
 
