@@ -20,6 +20,12 @@ namespace Assets.GameScripts.Views
             SceneManager.LoadScene(1);
         }
 
+        public void ReturnToLoadingScreen()
+        {
+            Debug.Log("hard click");
+            SceneManager.LoadScene(0);
+        }
+
         public class SceneChanger : MonoBehaviour
         {
             // Method to change the scene

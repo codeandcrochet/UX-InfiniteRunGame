@@ -9,7 +9,7 @@ public class Collectible : MonoBehaviour
     {
         // Calculate the left boundary based on the camera's position
         leftBound = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x - 1f; // Adjusted slightly off-screen
-        Debug.Log("Left Bound set to: " + leftBound); // Debug statement to confirm the boundary value
+        Debug.Log("Left Bound set to: " + leftBound); // Debug statement to confirm the boundary value  
     }
 
     private void Update()
@@ -31,7 +31,7 @@ public class Collectible : MonoBehaviour
             {
                 counter.IncrementCounter();
             }
-            Destroy(gameObject); // Destroy collectible if collected by the player
+            Destroy(gameObject); 
         }
     }
 }

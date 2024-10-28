@@ -1,7 +1,5 @@
+using Assets.GameScripts.Views;
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,12 +13,15 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private HealthManager healthManager;
+    private bool hasTakenDamage = false; // Flag to track if damage has been taken
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        healthManager = FindObjectOfType<HealthManager>();
     }
 
     void Update()
@@ -28,21 +29,38 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.enabled = false; // Disable the Animator
-            spriteRenderer.sprite = jumpUpSprite; // Set to jump up sprite
+            animator.enabled = false;
+            spriteRenderer.sprite = jumpUpSprite;
             isGrounded = false;
         }
 
         if (!isGrounded)
         {
             if (rb.velocity.y > 0)
-            {
-                  spriteRenderer.sprite = jumpUpSprite; // Rising sprite
-            }
+                spriteRenderer.sprite = jumpUpSprite;
             else if (rb.velocity.y < 0)
+                spriteRenderer.sprite = jumpDownSprite;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.CompareTag("HealthLoss")) && !hasTakenDamage)
+        {
+            if (healthManager != null)
             {
-                spriteRenderer.sprite = jumpDownSprite; // Falling sprite
+                healthManager.TakeDamage(1);
+                hasTakenDamage = true; // Prevent additional deductions from the same collision
+                Debug.Log("Health deducted from collision with ice block.");
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("HealthLoss") )
+        {
+            hasTakenDamage = false; // Reset the flag when leaving the collision area
         }
     }
 
@@ -51,15 +69,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            spriteRenderer.sprite = jumpLandSprite; // Set landing sprite
-            StartCoroutine(ReEnableAnimatorAfterDelay(0.2f)); // Wait for 0.2 seconds before enabling Animator
+            spriteRenderer.sprite = jumpLandSprite;
+            StartCoroutine(ReEnableAnimatorAfterDelay(0.2f));
         }
     }
 
     private IEnumerator ReEnableAnimatorAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); // Wait for the specified time in seconds
-        animator.enabled = true; // Re-enable the Animator component
+        yield return new WaitForSeconds(delay);
+        animator.enabled = true;
     }
-
 }
