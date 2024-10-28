@@ -10,6 +10,7 @@ namespace Assets.GameScripts.Views
         {
             Debug.Log("easy click");
             GameVars.Difficulty = Difficulty.Hard;
+            GameVars.ResetSpeed();
             SceneManager.LoadScene(1);
         }
 
@@ -17,12 +18,14 @@ namespace Assets.GameScripts.Views
         {
             Debug.Log("hard click");
             GameVars.Difficulty = Difficulty.Easy;
+            GameVars.ResetSpeed();
             SceneManager.LoadScene(1);
         }
 
         public void ReturnToLoadingScreen()
         {
             Debug.Log("hard click");
+            GameVars.ResetSpeed();
             SceneManager.LoadScene(0);
         }
 

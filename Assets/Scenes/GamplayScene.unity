@@ -1913,7 +1913,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.088753104, y: 0.04437617}
+  m_Offset: {x: 0.08875322, y: 0.6148808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1924,7 +1924,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.613742, y: 0.08885234}
+  m_Size: {x: 5.613742, y: 1.0522571}
   m_EdgeRadius: 0
 --- !u!212 &1630900671
 SpriteRenderer:
@@ -2311,7 +2311,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10059643, y: -0.957741}
+  m_Offset: {x: -0.10059643, y: -0.32667565}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2322,7 +2322,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8264256, y: 2.814116}
+  m_Size: {x: 1.8264256, y: 1.5519853}
   m_EdgeRadius: 0
 --- !u!1 &1792074999
 GameObject:
@@ -2444,8 +2444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceBlockPrefab: {fileID: 3270045180458983422, guid: a61ef21ba3b37f34183b7b08ee5cb0c8, type: 3}
-  spawnIntervalMin: 1
-  spawnIntervalMax: 3
   collectibleSpeed: 2
   horizontalOffsetRange: 1
   minSpacing: 1.5

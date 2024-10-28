@@ -28,9 +28,9 @@ public class ParallaxBackground_0 : MonoBehaviour
     }
 
     void Update(){
-        //Moving camera
+        GameVars.IncreaseSpeed();
         if (Camera_Move){
-        _camera.position += Vector3.right * Time.deltaTime * GameVars.CameraMoveSpeed;
+            _camera.position += Vector3.right * Time.deltaTime * GameVars.CameraMoveSpeed;
         }
         for (int i=0;i<5;i++){
             float temp = (_camera.position.x * (1-Layer_Speed[i]) );
