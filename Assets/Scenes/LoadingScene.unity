@@ -751,6 +751,9 @@ MonoBehaviour:
   jumpUpSprite: {fileID: 21300000, guid: d00a97fec0ddfde49bb6a9ae8d67a45b, type: 3}
   jumpDownSprite: {fileID: 21300000, guid: 371145ea5533f274aa6550d168f1bf4c, type: 3}
   jumpLandSprite: {fileID: 21300000, guid: ee1a12069c8273149801819a62088d65, type: 3}
+  collectSound: {fileID: 0}
+  jumpSound: {fileID: 0}
+  healthLossSound: {fileID: 0}
 --- !u!95 &474525686
 Animator:
   serializedVersion: 5
@@ -2725,6 +2728,7 @@ GameObject:
   - component: {fileID: 1926460630}
   - component: {fileID: 1926460629}
   - component: {fileID: 1926460628}
+  - component: {fileID: 1926460631}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2782,6 +2786,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926460631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926460627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b5f12c7a370b4a9e75d5e6815c3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999707712
 GameObject:
   m_ObjectHideFlags: 0

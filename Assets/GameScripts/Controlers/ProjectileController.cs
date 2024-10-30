@@ -1,3 +1,4 @@
+using Assets.GameScripts.Views;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,13 @@ public class ProjectileController : MonoBehaviour
     private Rigidbody2D rb;
     public float speed;
     public float destroyTime = 3f;
+    private HealthManager healthManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        healthManager = FindObjectOfType<HealthManager>();
+
         rb = GetComponent<Rigidbody2D>();  
         rb.velocity = transform.right * speed;
     }
@@ -19,7 +23,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            //TODO: Damage player once health is implemented
+            healthManager.TakeDamage(1);
             Destroy(gameObject);
         }
     }
