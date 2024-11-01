@@ -36,11 +36,11 @@ public class WalkingEnemySpawner : MonoBehaviour
         StartCoroutine(spawnAfterTime());
     }
 
-    public IEnumerator spawnAfterTime() //IEnumerator that calls SpawnEnemy() every 8-15 seconds
+    public IEnumerator spawnAfterTime() //IEnumerator that calls SpawnEnemy() every 7-10 seconds
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.2f + Random.Range(8, 16));
+            yield return new WaitForSeconds(0.2f + Random.Range(7, 11));
             SpawnEnemy();
         }
     }

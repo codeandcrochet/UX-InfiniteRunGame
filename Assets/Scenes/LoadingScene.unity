@@ -1949,6 +1949,7 @@ GameObject:
   - component: {fileID: 1554932264}
   - component: {fileID: 1554932263}
   - component: {fileID: 1554932262}
+  - component: {fileID: 1554932265}
   m_Layer: 5
   m_Name: InfoButton
   m_TagString: Untagged
@@ -2019,7 +2020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1554932263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554932265}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: InfoScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1554932263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,6 +2071,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554932260}
   m_CullTransparentMesh: 1
+--- !u!114 &1554932265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554932260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62bc8ddb9158324aac6519c0d14ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687823619
 GameObject:
   m_ObjectHideFlags: 0
